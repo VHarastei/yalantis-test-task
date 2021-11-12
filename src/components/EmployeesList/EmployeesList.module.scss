@@ -1,0 +1,26 @@
+.alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .alphabetLetterIsEmpty {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+.letterContainer {
+  width: 10rem;
+  margin: 0.5rem;
+  .letter {
+    margin: 0;
+  }
+}
+.employeeContainer {
+  margin-bottom: 0.5rem;
+  .fullname {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  .active {
+    color: blue;
+  }
+}
