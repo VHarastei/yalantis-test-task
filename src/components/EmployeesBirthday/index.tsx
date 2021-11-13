@@ -1,36 +1,37 @@
 import { Paper } from 'components/Paper';
+import { useAppSelector } from 'hooks/useAppSelector';
 import React from 'react';
-import { useAppSelector } from 'store/hooks';
-import { selectActiveEmployeesId, selectEmployees } from 'store/slices/employeesSlice';
+import { selectActiveEmployeeIds, selectEmployees } from 'store/slices/employeesSlice';
+import { getBirthdate } from 'utils/getBirthdate';
+import { getCurrentMonth } from 'utils/getCurrentMonth';
 import { getMonths } from 'utils/getMonths';
 import styles from './EmployeesBirthday.module.scss';
 
-type PropTypes = {};
 const months = getMonths();
 
-export const EmployeesBirthday: React.FC<PropTypes> = ({ children }) => {
-  const activeEmployees = useAppSelector(selectActiveEmployeesId);
-
-  if (!activeEmployees) return <div>loading</div>;
+export const EmployeesBirthday: React.FC = () => {
+  const activeEmployeesId = useAppSelector(selectActiveEmployeeIds);
+  const activeEmployees = useAppSelector(selectEmployees)
+    .filter((emp) => activeEmployeesId.includes(emp.id))
+    .sort((a, b) => a.lastName.localeCompare(b.lastName));
 
   return (
     <Paper title="Employees Birthday">
-      {activeEmployees.length ? (
-        months.map((month) => {
+      {activeEmployeesId.length ? (
+        months.map((month, index) => {
           let isEmpty = true;
           return (
-            <div>
+            <div className={styles.employeesContainer} key={index}>
               <h2>{month}</h2>
               <ul>
-                {activeEmployees.map((emp) => {
-                  const empMonth = new Date(emp.dob).toLocaleString('en', { month: 'long' });
-                  if (empMonth === month) {
+                {activeEmployees
+                  .filter(({ dob }) => month === getCurrentMonth(new Date(dob)))
+                  .map(({ id, firstName, lastName, dob }) => {
                     isEmpty = false;
-                    return <li key={emp.id}>{emp.lastName}</li>;
-                  }
-                })}
+                    return <li key={id}>{`${firstName} ${lastName} - ${getBirthdate(dob)}`}</li>;
+                  })}
+                {isEmpty && <h4>No Employees</h4>}
               </ul>
-              {isEmpty && <h4>No Employees</h4>}
             </div>
           );
         })

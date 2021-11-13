@@ -1,5 +1,7 @@
+import { getCurrentMonth } from './getCurrentMonth';
+
 export const getBirthdate = (strDate: string): string => {
   const date = new Date(strDate);
-  const [month, day, year] = date.toLocaleDateString('en-US').split('/');
-  return `${day} ${date.toLocaleString('en', { month: 'long' })}, ${year} year`;
+  const [, day, year] = date.toLocaleDateString('en-US').split('/');
+  return `${day} ${getCurrentMonth(date)}, ${year} year`;
 };

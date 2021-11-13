@@ -1,15 +1,12 @@
-import { EmployeesBirthday } from 'components/EmployeesBirthday';
-import { EmployeesList } from 'components/EmployeesList';
-import React from 'react';
-import styles from './App.module.scss';
-//import { EmployeesBirthday } from './components/EmployeesBirthday';
+import { Employees } from 'pages/Employees';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
   return (
-    <div className={styles.container}>
-      <EmployeesList />
-      <EmployeesBirthday />
-    </div>
+    <Routes>
+      <Route path="/employees" element={<Employees />} />
+      <Route path="*" element={<Navigate to="/employees" />} />
+    </Routes>
   );
 }
 

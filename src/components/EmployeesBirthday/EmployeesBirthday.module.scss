@@ -1,3 +1,16 @@
-.container {
-  width: 35%;
+.employeesContainer {
+  h2 {
+    margin: 0;
+  }
+  ul {
+    margin: 0;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    li,
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
 }

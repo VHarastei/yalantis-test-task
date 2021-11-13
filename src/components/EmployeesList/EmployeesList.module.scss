@@ -2,25 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  .alphabetLetterIsEmpty {
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
-}
-.letterContainer {
-  width: 10rem;
-  margin: 0.5rem;
-  .letter {
+
+  h4 {
     margin: 0;
-  }
-}
-.employeeContainer {
-  margin-bottom: 0.5rem;
-  .fullname {
     font-size: 1.25rem;
     font-weight: 500;
   }
-  .active {
-    color: blue;
+  .letterContainer {
+    width: 12rem;
+    margin: 0.5rem;
+    h2 {
+      margin: 0;
+    }
   }
 }
