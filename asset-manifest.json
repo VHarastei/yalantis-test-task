@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/yalantis-test-task/static/css/main.842fa5c9.chunk.css",
+    "main.js": "/yalantis-test-task/static/js/main.d238759f.chunk.js",
+    "main.js.map": "/yalantis-test-task/static/js/main.d238759f.chunk.js.map",
+    "runtime-main.js": "/yalantis-test-task/static/js/runtime-main.9be6d8e1.js",
+    "runtime-main.js.map": "/yalantis-test-task/static/js/runtime-main.9be6d8e1.js.map",
+    "static/js/2.0ec8ab8c.chunk.js": "/yalantis-test-task/static/js/2.0ec8ab8c.chunk.js",
+    "static/js/2.0ec8ab8c.chunk.js.map": "/yalantis-test-task/static/js/2.0ec8ab8c.chunk.js.map",
+    "static/js/3.b581d544.chunk.js": "/yalantis-test-task/static/js/3.b581d544.chunk.js",
+    "static/js/3.b581d544.chunk.js.map": "/yalantis-test-task/static/js/3.b581d544.chunk.js.map",
+    "index.html": "/yalantis-test-task/index.html",
+    "static/css/main.842fa5c9.chunk.css.map": "/yalantis-test-task/static/css/main.842fa5c9.chunk.css.map",
+    "static/js/2.0ec8ab8c.chunk.js.LICENSE.txt": "/yalantis-test-task/static/js/2.0ec8ab8c.chunk.js.LICENSE.txt",
+    "static/media/preloader.3d6722b7.svg": "/yalantis-test-task/static/media/preloader.3d6722b7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9be6d8e1.js",
+    "static/js/2.0ec8ab8c.chunk.js",
+    "static/css/main.842fa5c9.chunk.css",
+    "static/js/main.d238759f.chunk.js"
+  ]
+}
