@@ -32,8 +32,8 @@ const initialState: EmployeesState = {
 export const fetchEmployees = createAsyncThunk<IEmployee[]>(
   'employees/fetchEmployees',
   async () => {
-    const assets = await Api.getEmployees();
-    return assets;
+    const employees = await Api.getEmployees();
+    return employees;
   }
 );
 
